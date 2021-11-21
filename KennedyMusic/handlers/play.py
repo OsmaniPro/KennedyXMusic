@@ -871,7 +871,7 @@ async def ytplay(_, message: Message):
         ]
     )
     
-    nofound = "❗ **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+    nofound = "❗ **Couldn't find song you requested**\n\n📑 **Please provide the correct song name or include the artist's name as well**\n\n📚 View group commands [Here](https://telegra.ph/Skyzo-11-21-2)"
     
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -893,7 +893,7 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        f"💡 **please add the userbot to your channel first**",
+                        f"💡 **Please add the userbot to your channel first**",
                     )
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
@@ -906,7 +906,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await lel.edit(
-                        f"✅ **userbot succesfully entered chat**",
+                        f"✅ **Userbot succesfully entered chat**",
                     )
 
                 except UserAlreadyParticipant:
@@ -929,7 +929,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎧 **connecting to vc...**")
+    await lel.edit("🎧 **Connecting to vc...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -990,7 +990,7 @@ async def ytplay(_, message: Message):
         await _.send_photo(
             chid,
             photo="final.png",
-            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {message.from_user.mention}",
+            caption=f"😱 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -1014,7 +1014,7 @@ async def ytplay(_, message: Message):
             )
         except:
             await lel.edit(
-                "❌ **voice chat not found**\n\n» please turn on the voice chat first"
+                "❌ **Voice chat not found**\n\n» please turn on the voice chat first"
             )
             return
         await lel.delete()
@@ -1022,7 +1022,7 @@ async def ytplay(_, message: Message):
             chid,
             photo="final.png",
             caption=f"🏷 **Name:** [{title[:25]}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n"
-            + f"🎧 **Request by:** {message.from_user.mention}",
+            + f"🎧 **Request By:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
