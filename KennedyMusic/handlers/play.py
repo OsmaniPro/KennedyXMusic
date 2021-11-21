@@ -50,7 +50,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("💡 only admin can tap this button !", show_alert=True)
+            await cb.answer("💡 Only admin can tap this button !", show_alert=True)
             return
 
     return decorator
@@ -172,7 +172,7 @@ async def music_onoff(_, message):
             await lel.edit("» **music player already turned on.**")
             return
         DISABLED_GROUPS.remove(message.chat.id)
-        await lel.edit(f"✅ **music player turned on** for users in `{message.chat.title}`")
+        await lel.edit(f"✅ **Music player turned on** for users in `{message.chat.title}`")
 
     elif status in ("OFF", "off", "Off"):
         lel = await message.reply("`processing...`")
@@ -181,7 +181,7 @@ async def music_onoff(_, message):
             await lel.edit("» **music player already turned off.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
-        await lel.edit(f"✅ **music player turned off** for users in `{message.chat.title}`")
+        await lel.edit(f"✅ **Music player turned off** for users in `{message.chat.title}`")
     else:
         await message.reply_text(
             "**• usage:**\n\n `/musicp on` & `/musicp off`"
@@ -396,7 +396,7 @@ async def m_cb(b, cb):
                 await cb.message.edit(mmk, reply_markup=keyboard)
  
     elif type_ == "leave":
-        hps = "✅ **the music playback has ended**"
+        hps = "✅ **The music playback has ended**"
         ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
             ACTV_CALLS(int(x.chat_id))
@@ -437,7 +437,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔎 **searching**")
+    lel = await message.reply("🔎 **Searching**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     try:
@@ -593,7 +593,7 @@ async def play(_, message: Message):
             results = YoutubeSearch(query, max_results=5).to_dict()
         except:
             await lel.edit(
-                "❌ **song name not found, **please provide the name of the song you want to play"
+                "❌ **Song name not found, **please provide the name of the song you want to play"
             )
         try:
             await lel.delete()
@@ -609,8 +609,8 @@ async def play(_, message: Message):
             ]
             while j < 5:
                 toxxt += f"{emojilist[j]} **[{results[j]['title'][:25]}...](https://youtube.com{results[j]['url_suffix']})**\n"
-                toxxt += f" ├ 💡 **Duration** - `{results[j]['duration']}`\n"
-                toxxt += f" └ ⚡ __Powered by {BOT_NAME}__\n\n"
+                toxxt += f" ├ 😱 **Duration** - `{results[j]['duration']}`\n"
+                toxxt += f" └ 😎 __Powered By {BOT_NAME}__\n\n"
                 j += 1
             keyboard = InlineKeyboardMarkup(
                 [
@@ -633,7 +633,7 @@ async def play(_, message: Message):
                             "5️⃣", callback_data=f"plll 4|{query}|{user_id}"
                         ),
                     ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="✘ ᴄʟᴏsᴇ ꜰʟɪᴄᴋs ᴍᴇɴᴜ ✘​", callback_data="cls")],
                 ]
             )
             await _.send_photo(chid,
