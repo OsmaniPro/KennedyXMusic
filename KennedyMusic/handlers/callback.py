@@ -78,7 +78,7 @@ async def cbstart(_, query: CallbackQuery):
                         "📮 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠️ Source Code 🛠️", url=f"{UPSTREAM_REPO}")
+                        "👩‍💻 Owner", url=f"{UPSTREAM_REPO}")
                 ],[
                     InlineKeyboardButton(
                         "❔ About me​​", callback_data="cbabout"
