@@ -71,13 +71,15 @@ async def alive(client, message):
 
 {alv} **I'm Working Properly**
 
+{alv} **I'm Created By [Skyzo](https://t.me/xflskyzo)**
+
 {alv} **Bot : 6.0 LATEST**
 
 {alv} **My Master : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
 {alv} **Service Uptime : `{uptime}`**
 
-**Thanks For Using Me ❤️**""",
+**Thanks For Using Me ❤️‍🔥**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
