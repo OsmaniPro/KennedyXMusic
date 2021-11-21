@@ -46,7 +46,7 @@ async def addchannel(client, message):
         user.first_name = "music assistant"
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤦🏻‍♂: I'm Joined Here For Playing Music On Voice Chat More Info [Here](https://t.me/flicksrobotsupport")
+        await USER.send_message(message.chat.id, "🤦🏻‍♂: I'm Joined Here For Playing Music On Voice Chat More Info [Here](https://t.me/flicksrobotsupport)")
         await USER.send_sticker(message.chat.id, "CAACAgIAAx0CVUS_0gABAQLTYZms95xLObNRpJpznOo5mTvCSj8AAi4QAALMR-FJ0za1V4a_fEciBA")
     except UserAlreadyParticipant:
         await message.reply_text(f"<b>✅ Userbot already joined chat</b>")
