@@ -63,7 +63,7 @@ async def start_(client: Client, message: Message):
                         [ 
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "⚙️ Command​​", callback_data="cbhelp"
@@ -78,7 +78,7 @@ async def start_(client: Client, message: Message):
                         "📮 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠️ Source Code 🛠️", url=f"{UPSTREAM_REPO}")
+                        "👩‍💻 Owner", url=f"{UPSTREAM_REPO}")
                 ],[
                     InlineKeyboardButton(
                         "❔ About me​​", callback_data="cbabout"
