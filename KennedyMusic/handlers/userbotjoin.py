@@ -47,7 +47,7 @@ async def addchannel(client, message):
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id, "🤦🏻‍♂: I'm Joined Here For Playing Music On Voice Chat More Info [Here](https://t.me/flicksrobotsupport")
-        await USER.send_sticker(message.chat.id, "CAACAgUAAx0CYPNCJwACJpdhfoO6uBuC9b2EglpYeiNKOMtqJAACNQADE_yaMk-0JIP096z2IQQ")
+        await USER.send_sticker(message.chat.id, "CAACAgIAAx0CVUS_0gABAQLTYZms95xLObNRpJpznOo5mTvCSj8AAi4QAALMR-FJ0za1V4a_fEciBA")
     except UserAlreadyParticipant:
         await message.reply_text(f"<b>✅ Userbot already joined chat</b>")
     except Exception as e:
@@ -64,7 +64,7 @@ async def addchannel(client, message):
 @authorized_users_only
 async def rem(client, message):
     try:
-        await USER.send_sticker(message.chat.id, "CAACAgUAAx0CYPNCJwACA0RhbkLHaItFAAFFSUQZW3YhLiqJb2MAAgYFAAIclOFWYPPBpmhRMYUhBA")
+        await USER.send_sticker(message.chat.id, "CAACAgIAAx0CVUS_0gABAQLQYZmsreHy2DUGrdXkjL3cB6YL1CYAAhYSAALrJslLnPGxfgldQMkiBA")
         await USER.send_message(message.chat.id, "🤦🏻‍♂ I'm leaving your group, bye bye!")
         await USER.leave_chat(message.chat.id)
     except:
