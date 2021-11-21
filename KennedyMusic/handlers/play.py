@@ -906,7 +906,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await lel.edit(
-                        f"✅ **Userbot succesfully entered chat**",
+                        f"🥜 **Userbot Succesfully Entered Your Chats More Info [Here](https://t.me/flicksrobotsupport)**",
                     )
 
                 except UserAlreadyParticipant:
@@ -960,7 +960,7 @@ async def ytplay(_, message: Message):
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
+                f"❌ **Music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
             )
             return
     except:
@@ -990,7 +990,7 @@ async def ytplay(_, message: Message):
         await _.send_photo(
             chid,
             photo="final.png",
-            caption=f"😱 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {message.from_user.mention}",
+            caption=f"😱 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🦹 **Request By:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -1021,8 +1021,8 @@ async def ytplay(_, message: Message):
         await _.send_photo(
             chid,
             photo="final.png",
-            caption=f"🏷 **Name:** [{title[:25]}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n"
-            + f"🎧 **Request By:** {message.from_user.mention}",
+            caption=f"🏷 **Name:** [{title[:25]}]({url})\n⏱ **Duration:** `{duration}`\n📚 **Status:** `Playing`\n"
+            + f"🦹 **Request By:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
