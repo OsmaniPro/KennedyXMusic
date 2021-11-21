@@ -46,10 +46,10 @@ async def addchannel(client, message):
         user.first_name = "music assistant"
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for playing music on voice chat")
+        await USER.send_message(message.chat.id, "🤦🏻‍♂: I'm Joined Here For Playing Music On Voice Chat More Info [Here](https://t.me/flicksrobotsupport")
         await USER.send_sticker(message.chat.id, "CAACAgUAAx0CYPNCJwACJpdhfoO6uBuC9b2EglpYeiNKOMtqJAACNQADE_yaMk-0JIP096z2IQQ")
     except UserAlreadyParticipant:
-        await message.reply_text(f"<b>✅ userbot already joined chat</b>")
+        await message.reply_text(f"<b>✅ Userbot already joined chat</b>")
     except Exception as e:
         print(e)
         await message.reply_text(
@@ -57,7 +57,7 @@ async def addchannel(client, message):
             "\n\nor manually add assistant to your Group and try again</b>",
         )
         return
-    await message.reply_text(f"<b>✅ userbot successfully joined chat</b>")
+    await message.reply_text(f"<b>✅ Userbot successfully joined chat</b>")
 
 
 @Client.on_message(command(["userbotleave", f"userbotleave@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
@@ -65,7 +65,7 @@ async def addchannel(client, message):
 async def rem(client, message):
     try:
         await USER.send_sticker(message.chat.id, "CAACAgUAAx0CYPNCJwACA0RhbkLHaItFAAFFSUQZW3YhLiqJb2MAAgYFAAIclOFWYPPBpmhRMYUhBA")
-        await USER.send_message(message.chat.id, "✅ I'm leaving your group, bye bye!")
+        await USER.send_message(message.chat.id, "🤦🏻‍♂ I'm leaving your group, bye bye!")
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text("<b>user couldn't leave your group, may be floodwaits.\n\nor manually kick me from your group</b>")
