@@ -78,9 +78,6 @@ async def cbstart(_, query: CallbackQuery):
                         "📮 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "👩‍💻 Owner", url=f"{UPSTREAM_REPO}")
-                ],[
-                    InlineKeyboardButton(
                         "❔ About me​​", callback_data="cbabout"
                     )
                 ]
@@ -105,7 +102,7 @@ async def cbabout(_, query: CallbackQuery):
 
 __{bn} licensed under the GNU General Public License v.3.0__
 
-• Updates channel @{UPDATES_CHANNEL}
+• Updates Channel @{UPDATES_CHANNEL}
 • Group Support @{GROUP_SUPPORT}
 • Assistant @{ASSISTANT_NAME}
 • Here is my [Owner](https://t.me/{OWNER_NAME})**""",
